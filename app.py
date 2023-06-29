@@ -32,18 +32,18 @@ def register_extensions(app):
         token_in_redis = jwt_redis_blocklist.get(jti)
         return token_in_redis is not None
     
-    @app.before_request
-    def before_request():
-        print('\n' + "BEFORE REQUEST".center(30, '=') + '\n')
-        print(request)
-        print('\n' + "".center(30, '=') + '\n')
+    # @app.before_request
+    # def before_request():
+    #     print('\n' + "BEFORE REQUEST".center(30, '=') + '\n')
+    #     print(request)
+    #     print('\n' + "".center(30, '=') + '\n')
         
-    @app.after_request 
-    def after_request(response):
-        print('\n' + 'AFTER REQUEST'.center(30, '=') + '\n')
-        print(response)
-        print('\n', "".center(30, '=') + '\n')
-        return response 
+    # @app.after_request 
+    # def after_request(response):
+    #     print('\n' + 'AFTER REQUEST'.center(30, '=') + '\n')
+    #     print(response)
+    #     print('\n', "".center(30, '=') + '\n')
+    #     return response 
 
 def register_resources(app):
     api = Api(app)

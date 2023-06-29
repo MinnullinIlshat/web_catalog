@@ -1,4 +1,5 @@
 import logging
+import sqlalchemy_utils
 from logging.config import fileConfig
 
 from flask import current_app
