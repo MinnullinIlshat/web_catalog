@@ -1,4 +1,3 @@
-import json
 from flask import url_for 
 from marshmallow import Schema, fields, validate
 
@@ -11,6 +10,7 @@ class LinkSchema(Schema):
     class Meta: 
         ordered = True 
 
+    id = fields.Integer(dump_only=True)
     uuid = fields.UUID()
     protocol = fields.String()
     domain = fields.String()

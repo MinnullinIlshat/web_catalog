@@ -43,10 +43,8 @@ class LinkListResource(Resource):
         except ValidationError as err:
             return {"message": "Validation errors", 'errors': err.messages}, HTTPStatus.BAD_REQUEST
         
-        print(data, '\n')
         link = Link(**data)
         link.save()
-        print(link.params)
         
         return link_schema.dump(link), HTTPStatus.CREATED
 

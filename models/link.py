@@ -7,7 +7,8 @@ from sqlalchemy_utils import UUIDType
 class Link(db.Model):
     __tablename__ = 'link'
     
-    uuid = db.Column(UUIDType(binary=False), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    uuid = db.Column(UUIDType(binary=False), index=True)
     protocol = db.Column(db.String)
     domain = db.Column(db.String)
     domain_zone = db.Column(db.String)

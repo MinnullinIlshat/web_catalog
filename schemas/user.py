@@ -3,6 +3,8 @@ from marshmallow import Schema, fields
 from utils import hash_password 
 
 
+
+
 class UserSchema(Schema):
     class Meta: 
         ordered = True 
@@ -14,7 +16,6 @@ class UserSchema(Schema):
 
     created_at = fields.DateTime(dump_only=True)
     updated_at = fields.DateTime(dump_only=True)
-    
 
     def load_password(self, value):
         return hash_password(value)
