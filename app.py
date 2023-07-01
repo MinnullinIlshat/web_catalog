@@ -9,8 +9,7 @@ from resources.link import LinkListResource, LinkResource, LinkImageUploadResour
 from resources.token_res import TokenResource, RefreshResource, RevokeResource, jwt_redis_blocklist
 
 
-def ip_whitelist():
-    return request.remote_addr == '127.0.0.1'
+
 
 def create_app():
     app = Flask(__name__)

@@ -59,7 +59,7 @@ def params_to_dict(params: str) -> dict:
             k, v = item.split('=')
             p_dict[k] = v
         except ValueError:
-            k, v = item, ''
+            p_dict[item] = ''
     return p_dict
 
 def link_to_data(link: str) -> dict:
@@ -68,13 +68,11 @@ def link_to_data(link: str) -> dict:
     u_p = urlsplit(link)
     
     if not u_p.netloc or not u_p.scheme:
-        print('\nnot netloc or scheme\n', link)
         return "incorrect url"
     
     _uuid = uuid.uuid3(uuid.NAMESPACE_DNS, link)
 
     if Link.get_by_uuid(_uuid):
-        print('\n already exists\n', link)
         return "already exists"
     
     if params:= (u_p.query or {}):
@@ -102,8 +100,6 @@ async def get_status(result: dict,
         result['status'] = "недоступен"
         return result
     except ClientConnectionError as err:
-        print('\nurl ', url, '\n')
-        print(err) 
         return "url not exists"
     else: 
         result['status_code'] = response.status
@@ -117,36 +113,31 @@ def csvfile_processing(csv_file) -> tuple:
     
     errors = 0
     urls = [line.decode('utf-8').strip() for line in csv_file]
-    print(urls, sep='\n')
-    print('\n enter to csvfile_processing\n')
+    
+    with ProcessPoolExecutor() as process_pool:
+        results = list(process_pool.map(link_to_data, urls))
     
     async def main():
-        nonlocal errors
+        nonlocal errors, results
         timeout = aiohttp.ClientTimeout(1, .3)
         
         tasks = []
         
         async with aiohttp.ClientSession(timeout=timeout) as session:
-            with ProcessPoolExecutor() as process_pool:
-                for result in process_pool.map(link_to_data, urls):
-                    if result in ["incorrect url", "already exists"]:
-                        errors += 1
-                    else:
-                        print('\ncreate task\n', result)
-                        task = asyncio.create_task(get_status(result, session))
-                        tasks.append(task)
+            for result in results:
+                if result in ["incorrect url", "already exists"]:
+                    errors += 1
+                else:
+                    task = asyncio.create_task(get_status(result, session))
+                    tasks.append(task)
 
-            print('\n start asyncio.gather function \n')
             for res in await asyncio.gather(*tasks):
                 if res == "url not exists":
-                    print('\n url not exists\n')
                     errors += 1
                 else:
                     try:
                         data = LinkSchema().load(data=res)
                     except ValidationError as err:
-                        print(err)
-                        print('\nerror', res, '\n')
                         errors += 1
                     else: 
                         link = Link(**data)

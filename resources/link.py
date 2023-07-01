@@ -1,15 +1,18 @@
 import requests
-from flask import request
+import os
+import uuid
+from flask import request, current_app
 from flask_restful import Resource
 from http import HTTPStatus
 from marshmallow import ValidationError
 from zipfile import ZipFile
 from io import BytesIO
 from requests.exceptions import ConnectionError
+from werkzeug.utils import secure_filename
 
 from schemas.link import LinkSchema, LinkPaginationSchema
 from models.link import Link
-from utils import link_to_data, csvfile_processing
+from utils import link_to_data, csvfile_processing, allowed_image, compress_image
 
 
 
@@ -68,7 +71,34 @@ class LinkResource(Resource):
 
 
 class LinkImageUploadResource(Resource):
-    pass
+    def put(self, link_uuid):
+        file = request.files.get('image')
+        if not file:
+            return {"message": "Файл не найден"}, HTTPStatus.BAD_REQUEST
+        if not allowed_image(file.filename):
+            return {"message": "Некорректный тип файла."}, HTTPStatus.BAD_REQUEST 
+        
+        folder = current_app.config["UPLOADED_IMAGES_DEST"] + '/links'
+        link: Link = Link.get_by_uuid(_uuid=link_uuid)
+        
+        if link is None:
+            return {"message": "Link is not found"}, HTTPStatus.BAD_REQUEST
+        
+        if link.cover_image:
+            cover_path = os.path.join(folder, link.cover_image)
+            if os.path.exists(cover_path):
+                os.remove(cover_path)
+        
+        extension = secure_filename(file.filename).rsplit('.', 1)[1]
+        filename = f"{uuid.uuid4()}.{extension}"
+    
+        file.save(os.path.join(folder, filename))
+        filename = compress_image(filename, folder)
+        
+        link.cover_image = filename
+        link.save() 
+                
+        return LinkSchema(only=("image_url",)).dump(link), HTTPStatus.OK
 
 
 class LinkCsvUploadResource(Resource):

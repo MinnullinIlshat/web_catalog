@@ -26,7 +26,7 @@ class LinkSchema(Schema):
     def image_url_dump(self, link):
         if link.cover_image:
             return url_for('static', filename=f"images/links/{link.cover_image}", _external=True)
-        else: 
+        else:
             return url_for('static', filename="images/assets/default_link_image.jpg", _external=True)
         
         
