@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, current_app
 from flask_restful import Resource 
 from marshmallow import ValidationError
 from http import HTTPStatus 
@@ -30,6 +30,7 @@ class UserListResource(Resource):
         
         user = User(**data)
 
-        user.save() 
+        user.save()
+        current_app.logger.info(f'register new user: {user.username}')
 
         return user_schema.dump(user), HTTPStatus.CREATED

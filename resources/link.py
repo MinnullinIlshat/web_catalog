@@ -62,6 +62,7 @@ class LinkListResource(Resource):
         # создаем экземпляр Link и сохраняем в базе данных
         link = Link(**data)
         link.save()
+        current_app.logger.info(f'add link to db: {link.url}')
         
         return link_schema.dump(link), HTTPStatus.CREATED
 
@@ -97,7 +98,8 @@ class LinkImageUploadResource(Resource):
         
         link.cover_image = filename
         link.save() 
-                
+        current_app.logger.info(f'add image to url: {link.url}')
+        
         return LinkSchema(only=("image_url",)).dump(link), HTTPStatus.OK
 
 

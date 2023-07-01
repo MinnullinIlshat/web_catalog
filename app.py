@@ -1,13 +1,15 @@
+import logging
+from logging.handlers import RotatingFileHandler
 from flask import Flask, request
 from flask_restful import Api
 from flask_migrate import Migrate
 
 from config import Config
 from extensions import db, jwt
+from wi import get_logs
 from resources.user import UserListResource
 from resources.link import LinkListResource, LinkResource, LinkImageUploadResource, LinkCsvUploadResource
 from resources.token_res import TokenResource, RefreshResource, RevokeResource, jwt_redis_blocklist
-
 
 
 
@@ -17,6 +19,14 @@ def create_app():
 
     register_extensions(app)
     register_resources(app)
+    
+    logging.basicConfig(filename='logfile.log', level=logging.DEBUG,
+        format="%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s")
+
+    handler = RotatingFileHandler("logfile.log", maxBytes=1024*1024, backupCount=3)
+    handler.setLevel(logging.INFO)
+    app.logger.setLevel(logging.INFO)
+    app.logger.addHandler(handler)
 
     return app 
 
@@ -31,20 +41,16 @@ def register_extensions(app):
         token_in_redis = jwt_redis_blocklist.get(jti)
         return token_in_redis is not None
     
-    # @app.before_request
-    # def before_request():
-    #     print('\n' + "BEFORE REQUEST".center(30, '=') + '\n')
-    #     print(request)
-    #     print('\n' + "".center(30, '=') + '\n')
+    @app.before_request
+    def before_request():
+        app.logger.info(request)
         
-    # @app.after_request 
-    # def after_request(response):
-    #     print('\n' + 'AFTER REQUEST'.center(30, '=') + '\n')
-    #     print(response)
-    #     print('\n', "".center(30, '=') + '\n')
-    #     return response 
+    @app.after_request 
+    def after_request(response):
+        app.logger.info(response)
+        return response 
 
-def register_resources(app):
+def register_resources(app: Flask):
     api = Api(app)
 
     api.add_resource(UserListResource, '/users')
@@ -57,6 +63,8 @@ def register_resources(app):
     api.add_resource(LinkResource, '/links/<string:link_uuid>')
     api.add_resource(LinkImageUploadResource, '/links/<string:link_uuid>/image')
     api.add_resource(LinkCsvUploadResource, '/links/csv')
+    
+    app.add_url_rule('/logs', view_func=get_logs)
 
 if __name__ == '__main__':
     app = create_app()

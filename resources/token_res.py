@@ -1,7 +1,7 @@
 import redis
 from http import HTTPStatus 
-from flask import request
-from flask_restful import Resource 
+from flask import request, current_app
+from flask_restful import Resource
 from flask_jwt_extended import (
     create_access_token,
     create_refresh_token,
@@ -23,13 +23,16 @@ class TokenResource(Resource):
         json_data = request.get_json()
         email = json_data.get('email')
         password = json_data.get('password')
-        user = User.get_by_email(email=email)
+        user: User = User.get_by_email(email=email)
+        
         if not user or not check_password(password, user.password):
+            current_app.logger.info(f'failed authentication attemt: {email}')
             return {"message": "email or password is incorrect"}, HTTPStatus.UNAUTHORIZED
         
         access_token = create_access_token(identity=user.id, fresh=True)
         refresh_token = create_refresh_token(identity=user.id)
 
+        current_app.logger.info(f'successful authentication: {email}')
         return {"access_token": access_token,
                 "refresh_token": refresh_token}, HTTPStatus.OK
     

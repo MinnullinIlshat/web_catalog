@@ -1,0 +1,147 @@
+2023-07-01 13:19:34,146 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-01 13:19:34,146 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-01 13:19:34,148 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 13:19:36,023 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 13:19:36,024 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+2023-07-01 13:22:35,499 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-01 13:22:35,986 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 13:22:37,877 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 13:22:37,878 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+2023-07-01 13:22:44,144 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-01 13:22:44,632 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 13:22:46,925 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 13:22:46,926 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-01 13:22:48,160 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 8596 bytes [200 OK]>
+2023-07-01 13:22:48,265 INFO app Thread-2 (process_request_thread) : <Response 8596 bytes [200 OK]>
+2023-07-01 13:22:48,267 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:22:48] "GET /links HTTP/1.1" 200 -
+2023-07-01 13:23:47,476 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-01 13:23:47,945 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 13:23:50,432 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 13:23:50,434 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+2023-07-01 13:23:51,970 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:23:51] "GET /links HTTP/1.1" 200 -
+2023-07-01 13:24:34,011 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:24:34] "GET /links HTTP/1.1" 200 -
+2023-07-01 13:25:09,783 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-01 13:25:10,249 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 13:25:12,474 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 13:25:12,475 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-01 13:25:20,582 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+2023-07-01 13:25:20,697 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:25:20] "GET /links HTTP/1.1" 200 -
+2023-07-01 13:25:42,679 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-01 13:25:43,183 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 13:25:45,430 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 13:25:45,431 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-01 13:25:46,337 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 8596 bytes [200 OK]>
+2023-07-01 13:25:46,480 INFO app Thread-2 (process_request_thread) : <Response 8596 bytes [200 OK]>
+2023-07-01 13:25:46,484 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:25:46] "GET /links HTTP/1.1" 200 -
+<Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-01 13:27:00,280 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-01 13:27:00,467 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:27:00] "[35m[1mPOST /links/csv HTTP/1.1[0m" 500 -
+<Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-01 13:27:15,031 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-01 13:27:15,201 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:27:15] "[35m[1mPOST /links/csv HTTP/1.1[0m" 500 -
+2023-07-01 13:27:33,877 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-01 13:27:33,877 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-01 13:27:33,879 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 13:27:35,868 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 13:27:35,869 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-01 13:27:38,384 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-01 13:27:38,597 DEBUG asyncio Thread-2 (process_request_thread) : Using selector: EpollSelector
+<Response 359 bytes [201 CREATED]>
+2023-07-01 13:27:38,600 INFO app Thread-2 (process_request_thread) : <Response 359 bytes [201 CREATED]>
+2023-07-01 13:27:38,603 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:27:38] "[35m[1mPOST /links/csv HTTP/1.1[0m" 201 -
+<Request 'http://localhost:5000/links' [POST]>
+2023-07-01 13:27:57,514 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/links' [POST]>
+<Response 207 bytes [400 BAD REQUEST]>
+2023-07-01 13:27:57,627 INFO app Thread-4 (process_request_thread) : <Response 207 bytes [400 BAD REQUEST]>
+2023-07-01 13:27:57,630 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 13:27:57] "[31m[1mPOST /links HTTP/1.1[0m" 400 -
+2023-07-01 14:01:58,791 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-01 14:01:58,791 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-01 14:01:58,793 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 14:02:00,697 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 14:02:00,698 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/links' [POST]>
+2023-07-01 14:02:15,362 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/links' [POST]>
+<Response 207 bytes [400 BAD REQUEST]>
+2023-07-01 14:02:15,470 INFO app Thread-2 (process_request_thread) : <Response 207 bytes [400 BAD REQUEST]>
+2023-07-01 14:02:15,472 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:02:15] "[31m[1mPOST /links HTTP/1.1[0m" 400 -
+<Request 'http://localhost:5000/users' [POST]>
+2023-07-01 14:02:56,571 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/users' [POST]>
+register new user: ilshat
+2023-07-01 14:02:56,708 INFO app Thread-3 (process_request_thread) : register new user: ilshat
+<Response 171 bytes [201 CREATED]>
+2023-07-01 14:02:56,709 INFO app Thread-3 (process_request_thread) : <Response 171 bytes [201 CREATED]>
+2023-07-01 14:02:56,711 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:02:56] "[35m[1mPOST /users HTTP/1.1[0m" 201 -
+<Request 'http://localhost:5000/token' [POST]>
+2023-07-01 14:04:01,211 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/token' [POST]>
+successful authentication: ilshat@gmail.com
+2023-07-01 14:04:01,274 INFO app Thread-4 (process_request_thread) : successful authentication: ilshat@gmail.com
+<Response 575 bytes [200 OK]>
+2023-07-01 14:04:01,275 INFO app Thread-4 (process_request_thread) : <Response 575 bytes [200 OK]>
+2023-07-01 14:04:01,277 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:04:01] "POST /token HTTP/1.1" 200 -
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-01 14:04:39,047 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 8596 bytes [200 OK]>
+2023-07-01 14:04:39,096 INFO app Thread-5 (process_request_thread) : <Response 8596 bytes [200 OK]>
+2023-07-01 14:04:39,099 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:04:39] "GET /links HTTP/1.1" 200 -
+<Request 'http://localhost:5000/links' [POST]>
+2023-07-01 14:06:22,679 INFO app Thread-6 (process_request_thread) : <Request 'http://localhost:5000/links' [POST]>
+<Response 207 bytes [400 BAD REQUEST]>
+2023-07-01 14:06:22,685 INFO app Thread-6 (process_request_thread) : <Response 207 bytes [400 BAD REQUEST]>
+2023-07-01 14:06:22,687 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:06:22] "[31m[1mPOST /links HTTP/1.1[0m" 400 -
+<Request 'http://localhost:5000/links/3c2e5539-9d27-30b3-85ee-950bc7b75736/image' [PUT]>
+2023-07-01 14:07:10,460 INFO app Thread-7 (process_request_thread) : <Request 'http://localhost:5000/links/3c2e5539-9d27-30b3-85ee-950bc7b75736/image' [PUT]>
+add image to url: https://docs.celeryq.dev/en/stable/userguide/configuration.html
+2023-07-01 14:07:10,598 INFO app Thread-7 (process_request_thread) : add image to url: https://docs.celeryq.dev/en/stable/userguide/configuration.html
+<Response 106 bytes [200 OK]>
+2023-07-01 14:07:10,600 INFO app Thread-7 (process_request_thread) : <Response 106 bytes [200 OK]>
+2023-07-01 14:07:10,602 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:07:10] "PUT /links/3c2e5539-9d27-30b3-85ee-950bc7b75736/image HTTP/1.1" 200 -
+2023-07-01 14:08:27,874 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/resources/token_res.py', reloading
+2023-07-01 14:08:28,385 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 14:08:31,365 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 14:08:31,367 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+2023-07-01 14:08:38,699 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/models/link.py', reloading
+2023-07-01 14:08:39,238 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 14:08:41,305 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 14:08:41,306 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+2023-07-01 14:11:52,205 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/utils.py', reloading
+2023-07-01 14:11:52,657 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 14:11:54,611 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 14:11:54,612 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+2023-07-01 14:28:49,382 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-01 14:28:49,382 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-01 14:28:49,384 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 14:28:51,264 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 14:28:51,265 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/logs' [GET]>
+2023-07-01 14:34:27,422 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/logs' [GET]>
+<Response streamed [404 NOT FOUND]>
+2023-07-01 14:34:27,424 INFO app Thread-2 (process_request_thread) : <Response streamed [404 NOT FOUND]>
+2023-07-01 14:34:27,425 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:34:27] "[33mGET /logs HTTP/1.1[0m" 404 -
+2023-07-01 14:34:41,630 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-01 14:34:42,143 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 14:34:44,277 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 14:34:44,279 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/logs' [GET]>
+2023-07-01 14:34:46,741 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/logs' [GET]>
+<Response 5044 bytes [200 OK]>
+2023-07-01 14:34:46,743 INFO app Thread-2 (process_request_thread) : <Response 5044 bytes [200 OK]>
+2023-07-01 14:34:46,745 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 14:34:46] "GET /logs HTTP/1.1" 200 -
+2023-07-01 15:12:57,697 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-01 15:12:58,174 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-01 15:13:02,281 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-01 15:13:02,282 INFO werkzeug MainThread :  * Debugger PIN: 966-214-363
+<Request 'http://localhost:5000/logs' [GET]>
+2023-07-01 15:13:10,335 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/logs' [GET]>
+<Response 5007 bytes [200 OK]>
+2023-07-01 15:13:10,337 INFO app Thread-2 (process_request_thread) : <Response 5007 bytes [200 OK]>
+2023-07-01 15:13:10,338 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [01/Jul/2023 15:13:10] "GET /logs HTTP/1.1" 200 -

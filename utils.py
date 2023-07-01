@@ -4,6 +4,7 @@ import aiohttp
 import asyncio
 
 from PIL import Image
+from flask import current_app
 from passlib.hash import pbkdf2_sha256 
 from urllib.parse import urlsplit
 from concurrent.futures import ProcessPoolExecutor
@@ -95,6 +96,7 @@ async def get_status(result: dict,
     try:
         url = result['url']
         response = await session.get(url)
+        current_app.logger.info(f'link status update: {url}')
     except (TimeoutError, ServerTimeoutError): 
         result['status_code'] = 999 
         result['status'] = "недоступен"
