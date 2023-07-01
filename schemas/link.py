@@ -12,6 +12,7 @@ class LinkSchema(Schema):
 
     id = fields.Integer(dump_only=True)
     uuid = fields.UUID()
+    url = fields.String(load_only=True)
     protocol = fields.String()
     domain = fields.String()
     domain_zone = fields.String()

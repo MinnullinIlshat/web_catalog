@@ -9,6 +9,7 @@ class Link(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(UUIDType(binary=False), index=True)
+    url = db.Column(db.String)
     protocol = db.Column(db.String)
     domain = db.Column(db.String)
     domain_zone = db.Column(db.String)
