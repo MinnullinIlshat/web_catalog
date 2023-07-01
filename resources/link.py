@@ -28,8 +28,16 @@ class LinkListResource(Resource):
         per_page = int(args.get('per_page') or 20)
         page = int(args.get('page') or 1)
         q = args.get('q') or ''
+        sort = args.get('sort') or 'id'
+        order = args.get('order') or 'desc'
         
-        paginated_links = Link.get_all_published(q, page, per_page)
+        if sort not in ['id', 'uuid', 'domain_zone', 'status']:
+            sort = 'id'
+            
+        if order not in ['asc', 'desc']:
+            order = 'desc'
+        
+        paginated_links = Link.get_all_published(q, page, per_page, sort, order)
         return link_pagination_schema.dump(paginated_links), HTTPStatus.OK
     
     def post(self):
