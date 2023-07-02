@@ -124,3 +124,12 @@ def pdf_download():
             pdf.cell(200, 10, txt=line, ln=1, align='C')
     pdf.output('static/images/assets/logs.pdf')
     return redirect(f"/static/images/assets/logs.pdf")
+
+def get_link(uuid):
+    data = dict(requests.get(f'http://localhost:5000/links/{uuid}').json())
+    
+    if data.get('message'):
+        flash('Ссылки с таким uuid не существует')
+        return render_template('index.html')
+    
+    return render_template('link_page.html', data=data)

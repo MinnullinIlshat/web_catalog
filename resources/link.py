@@ -77,7 +77,14 @@ class LinkListResource(Resource):
 
 
 class LinkResource(Resource):
-    pass
+    def get(self, link_uuid):
+
+        link = Link.get_by_uuid(_uuid=link_uuid)
+
+        if link is None:
+            return {'message': 'Link not found'}, HTTPStatus.NOT_FOUND
+
+        return link_schema.dump(link), HTTPStatus.OK
 
 
 class LinkImageUploadResource(Resource):

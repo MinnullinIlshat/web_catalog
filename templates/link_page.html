@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<h4>id: {{ data.id }}</h4>
+<h4>uuid: {{ data.uuid }}</h4>
+<h4>protocol: {{ data.protocol }}</h4>
+<h4>domain: {{ data.domain }}</h4>
+<h4>domain_zone: {{ data.domain_zone }}</h4>
+<h4>path: {{ data.path }}</h4>
+<h4>status_code: {{ data.status_code }}</h4>
+<h4>status: {{ data.status }}</h4>
+<h4>params: {{ data.params }}</h4>
+<img src="{{ data.image_url }}">
+
+{% endblock content %}
