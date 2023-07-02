@@ -53,7 +53,8 @@ def file_upload():
     file = request.files['file']
     
     if file.filename.rsplit('.', 1)[-1] != 'zip':
-            return {"message": "Файл должен иметь расширение'.zip'"}, HTTPStatus.BAD_REQUEST
+        flash("Файл должен иметь расширение'.zip'")
+        return render_template('upload.html')
         
     file_io = BytesIO()
     file.save(file_io)

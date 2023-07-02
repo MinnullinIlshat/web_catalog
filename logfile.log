@@ -2271,3 +2271,51 @@ add link to db: https://ru.wikipedia.org/wiki/Cron
 2023-07-02 06:17:22,895 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
 2023-07-02 06:17:28,114 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/wi.py', reloading
 2023-07-02 06:17:28,670 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:19:06,325 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-02 06:19:06,325 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-02 06:19:06,327 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:19:08,316 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:19:08,317 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/upload' [GET]>
+2023-07-02 06:19:09,703 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/upload' [GET]>
+<Response 1575 bytes [200 OK]>
+2023-07-02 06:19:09,731 INFO app Thread-2 (process_request_thread) : <Response 1575 bytes [200 OK]>
+2023-07-02 06:19:09,733 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:19:09] "GET /upload HTTP/1.1" 200 -
+<Request 'http://localhost:5000/file_upload' [POST]>
+2023-07-02 06:19:17,322 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/file_upload' [POST]>
+<Response 179 bytes [400 BAD REQUEST]>
+2023-07-02 06:19:17,332 INFO app Thread-3 (process_request_thread) : <Response 179 bytes [400 BAD REQUEST]>
+2023-07-02 06:19:17,333 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:19:17] "[31m[1mPOST /file_upload HTTP/1.1[0m" 400 -
+2023-07-02 06:20:25,486 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/wi.py', reloading
+2023-07-02 06:20:25,974 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:20:28,254 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:20:28,255 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/file_upload' [POST]>
+2023-07-02 06:20:31,399 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/file_upload' [POST]>
+<Response 1704 bytes [200 OK]>
+2023-07-02 06:20:31,425 INFO app Thread-2 (process_request_thread) : <Response 1704 bytes [200 OK]>
+2023-07-02 06:20:31,428 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:20:31] "POST /file_upload HTTP/1.1" 200 -
+<Request 'http://localhost:5000/file_upload' [POST]>
+2023-07-02 06:20:44,587 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/file_upload' [POST]>
+2023-07-02 06:20:44,814 DEBUG asyncio Thread-3 (process_request_thread) : Using selector: EpollSelector
+<Response 1308 bytes [200 OK]>
+2023-07-02 06:20:44,822 INFO app Thread-3 (process_request_thread) : <Response 1308 bytes [200 OK]>
+2023-07-02 06:20:44,823 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:20:44] "POST /file_upload HTTP/1.1" 200 -
+<Request 'http://localhost:5000/logs' [GET]>
+2023-07-02 06:20:50,011 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/logs' [GET]>
+<Response 4997 bytes [200 OK]>
+2023-07-02 06:20:50,017 INFO app Thread-4 (process_request_thread) : <Response 4997 bytes [200 OK]>
+2023-07-02 06:20:50,021 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:20:50] "GET /logs HTTP/1.1" 200 -
+<Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:20:53,395 INFO app Thread-6 (process_request_thread) : <Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:20:53,408 DEBUG urllib3.connectionpool Thread-6 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-02 06:20:53,413 INFO app Thread-8 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 5281 bytes [200 OK]>
+2023-07-02 06:20:53,544 INFO app Thread-8 (process_request_thread) : <Response 5281 bytes [200 OK]>
+2023-07-02 06:20:53,546 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:20:53] "GET /links HTTP/1.1" 200 -
+2023-07-02 06:20:53,548 DEBUG urllib3.connectionpool Thread-6 (process_request_thread) : http://localhost:5000 "GET /links HTTP/1.1" 200 5281
+<Response 7041 bytes [200 OK]>
+2023-07-02 06:20:53,614 INFO app Thread-6 (process_request_thread) : <Response 7041 bytes [200 OK]>
+2023-07-02 06:20:53,616 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:20:53] "GET / HTTP/1.1" 200 -
