@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Файл успешно обработан.</h3>
+<h4>Добавлено ссылок: {{ data.success }}</h4>
+<h4>Отклонено ссылок: {{ data.errors }}</h4>
+<h4>Всего обработано: {{ data.total }}</h4>
+{% endblock content %}
+

@@ -25,7 +25,7 @@ class LinkListResource(Resource):
     def get(self):
         args = request.args.to_dict()
         
-        per_page = int(args.get('per_page') or 20)
+        per_page = int(args.get('per_page') or 10)
         page = int(args.get('page') or 1)
         q = args.get('q') or ''
         sort = args.get('sort') or 'id'
@@ -134,7 +134,7 @@ class LinkCsvUploadResource(Resource):
                 links_count, errors, links_to_save = csvfile_processing(csv_file)
                 
             return {
-                "обработано ссылок": links_count,
-                "количество ошибок": errors,
-                "количество сохраненных": links_to_save,
+                "total": links_count,
+                "errors": errors,
+                "success": links_to_save,
             }, HTTPStatus.CREATED

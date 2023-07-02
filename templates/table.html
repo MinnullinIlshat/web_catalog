@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<table class="table">
+	<nav aria-label="Page navigation example">
+		<ul class="pagination">
+		{% if pagination.links.first %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.first}}">First</a></li>
+		{% endif %}
+		{% if pagination.links.prev %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.prev}}">Previous</a></li>
+		{% endif %}
+		{% for num in pages %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{num}}">{{num}}</a></li>
+		{% endfor %}
+		{% if pagination.links.next %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.next}}">Next</a></li>
+		{% endif %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.last}}">Last</a></li>
+		</ul>
+	  </nav>
+	<thead>
+		<tr>
+			<th scope="col"><a href="/table/id/{{order}}/{{page}}">id</a></th>
+			<th scope="col"><a href="/table/uuid/{{order}}/{{page}}">uuid</a></th>
+			<th scope="col"><a href="/table/protocol/{{order}}/{{page}}">protocol</a></th>
+			<th scope="col"><a href="/table/domain/{{order}}/{{page}}">domain</a></th>
+			<th scope="col"><a href="/table/domain_zone/{{order}}/{{page}}">domain_zone</a></th>
+			<th scope="col"><a href="/table/path/{{order}}/{{page}}">path</a></th>
+			<th scope="col">status_code</th>
+			<th scope="col"><a href="/table/status/{{order}}/{{page}}">status</a></th>
+			<th scope="col"><a href="/table/params/{{order}}/{{page}}">params</a></th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for item in pagination.data %}
+		<tr>
+			<th scope="col">{{item.id}}</th>
+			<th scope="col">{{item.uuid}}</th>
+			<th scope="col">{{item.protocol}}</th>
+			<th scope="col">{{item.domain}}</th>
+			<th scope="col">{{item.domain_zone}}</th>
+			<th scope="col">{{item.path}}</th>
+			<th scope="col">{{item.status_code}}</th>
+			<th scope="col">{{item.status}}</th>
+			<th scope="col">{{item.params}}</th>
+		</tr>
+	{% endfor %}
+	</tbody>
+	</table>
+	<nav aria-label="Page navigation example">
+		<ul class="pagination">
+		{% if pagination.links.first %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.first}}">First</a></li>
+		{% endif %}
+		{% if pagination.links.prev %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.prev}}">Previous</a></li>
+		{% endif %}
+		{% for num in pages %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{num}}">{{num}}</a></li>
+		{% endfor %}
+		{% if pagination.links.next %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.next}}">Next</a></li>
+		{% endif %}
+		  <li class="page-item"><a class="page-link" href="http://localhost:5000/table/{{sort}}/{{order}}/{{pagination.links.last}}">Last</a></li>
+		</ul>
+	  </nav>
+{% endblock %}

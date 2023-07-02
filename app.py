@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 
 from config import Config
 from extensions import db, jwt
-from wi import get_logs
+from wi import get_logs, table, index, upload, file_upload
 from resources.user import UserListResource
 from resources.link import LinkListResource, LinkResource, LinkImageUploadResource, LinkCsvUploadResource
 from resources.token_res import TokenResource, RefreshResource, RevokeResource, jwt_redis_blocklist
@@ -65,7 +65,11 @@ def register_resources(app: Flask):
     api.add_resource(LinkCsvUploadResource, '/links/csv')
     
     app.add_url_rule('/logs', view_func=get_logs)
-
+    app.add_url_rule('/', view_func=index)
+    app.add_url_rule('/table/<string:sort>/<string:order>/<int:page>', view_func=table)
+    app.add_url_rule('/upload', view_func=upload, methods=['GET', 'POST'])
+    app.add_url_rule('/file_upload', view_func=file_upload, methods=['POST'])
+    
 if __name__ == '__main__':
     app = create_app()
     app.run()

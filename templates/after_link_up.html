@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if data.message %}
+    <h3>Сообщение: {{ data.message }}</h3>
+{% else %}
+    <h3>id: {{ data.protocol }}</h3>
+    <h3>uuid: {{ data.domain }}</h3>
+    <h3>domain: {{ data.domain_zone }}</h3>
+    <h3>domain_zone: {{ data.path }}</h3>
+    <h3>path: {{ data.params }}</h3>
+    <h3>status: {{ data.status }}</h3>
+    <h3>status_code: {{ data.status_code }}</h3>
+    <h3>params: {{ data.params }}</h3>
+{% endif %}
+{% endblock content %}
