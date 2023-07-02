@@ -12,7 +12,7 @@ from werkzeug.utils import secure_filename
 
 from schemas.link import LinkSchema, LinkPaginationSchema
 from models.link import Link
-from utils import link_to_data, csvfile_processing, allowed_image, compress_image
+from utils import link_to_data, csvfile_processing, allowed_image, compress_image, save_news
 
 
 
@@ -56,6 +56,7 @@ class LinkListResource(Resource):
         # сделать запрос к url и добавить поля status и status_code
         try:
             status_code = requests.get(url).status_code
+            save_news(f'Обновлен статус для сайта {url}: {status_code}')
             link_data["status_code"] = status_code
             link_data["status"] = "недоступен" if status_code > 399 else "доступен"
         except ConnectionError as err:

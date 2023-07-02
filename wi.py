@@ -1,4 +1,5 @@
 import requests
+from collections import deque
 from io import BytesIO
 from flask import current_app, render_template, redirect
 from flask import request, flash
@@ -9,6 +10,9 @@ from time import sleep
 from fpdf import FPDF
 
 
+
+
+NEWS = deque(maxlen=50)
 
 def get_logs():
     '''возвращает последние n строк логов'''
@@ -94,6 +98,11 @@ def file_upload():
     
 def logs_page():
     return render_template('logging.html')
+
+def news():
+    with open('news.txt', 'r') as file:
+        data = file.readlines()
+    return render_template('news.html', data=data)
     
 def stream():
     def generate():
@@ -104,6 +113,7 @@ def stream():
                 sleep(1)
     
     return current_app.response_class(generate(), mimetype="text/plain")
+
 
 def pdf_download():
     pdf = FPDF()

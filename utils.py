@@ -89,6 +89,10 @@ def link_to_data(link: str) -> dict:
         'uuid': _uuid,
     }
 
+def save_news(s: str) -> None: 
+    with open('news.txt', 'a') as file:
+        file.write(s)
+
 async def get_status(result: dict, 
                      session: aiohttp.ClientSession) -> dict:
     '''добавляет status "доступен/недоступен" и status_code
@@ -100,12 +104,14 @@ async def get_status(result: dict,
     except (TimeoutError, ServerTimeoutError): 
         result['status_code'] = 999 
         result['status'] = "недоступен"
+        save_news(f'Изменился статус для сайта {url}: 999')
         return result
     except ClientConnectionError as err:
         return "url not exists"
     else: 
         result['status_code'] = response.status
         result['status'] = "доступен" if result['status_code'] < 400 else "недоступен"
+        save_news(f'Изменился статус для сайта {url}: {response.status}')
         return result
 
 def csvfile_processing(csv_file) -> tuple:
