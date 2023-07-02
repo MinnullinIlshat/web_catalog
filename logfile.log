@@ -3424,3 +3424,60 @@ add link to db: https://www.geeksforgeeks.org/convert-text-and-text-file-to-pdf-
 <Response 6798 bytes [200 OK]>
 2023-07-02 08:55:43,055 INFO app Thread-14 (process_request_thread) : <Response 6798 bytes [200 OK]>
 2023-07-02 08:55:43,057 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 08:55:43] "GET / HTTP/1.1" 200 -
+2023-07-02 09:03:09,083 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-02 09:03:09,083 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-02 09:03:09,085 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 09:03:11,140 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 09:03:11,141 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+2023-07-02 09:03:19,061 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 09:03:19,227 INFO app Thread-2 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 09:03:19,230 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:03:19] "GET /links?order=asc&sort=id HTTP/1.1" 200 -
+<Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:03:27,340 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:03:27,375 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:03:27] "[35m[1mPOST /links/csv HTTP/1.1[0m" 500 -
+<Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:06:05,812 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:06:06,023 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:06:06] "[35m[1mPOST /links/csv HTTP/1.1[0m" 500 -
+<Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+2023-07-02 09:06:28,386 INFO app Thread-6 (process_request_thread) : <Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+2023-07-02 09:06:28,455 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:06:28] "[35m[1mGET /links?order=asc&sort=id HTTP/1.1[0m" 500 -
+<Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+2023-07-02 09:06:32,719 INFO app Thread-7 (process_request_thread) : <Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 09:06:32,776 INFO app Thread-7 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 09:06:32,780 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:06:32] "GET /links?order=asc&sort=id HTTP/1.1" 200 -
+<Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:06:39,086 INFO app Thread-8 (process_request_thread) : <Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:06:39,242 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:06:39] "[35m[1mPOST /links/csv HTTP/1.1[0m" 500 -
+2023-07-02 09:15:28,510 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-02 09:15:28,542 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-02 09:15:28,559 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 09:15:30,505 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 09:15:30,769 INFO werkzeug MainThread :  * Debugger PIN: 428-264-665
+<Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:16:26,920 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/links/csv' [POST]>
+2023-07-02 09:16:28,098 DEBUG asyncio Thread-2 (process_request_thread) : Using selector: EpollSelector
+<Response 56 bytes [201 CREATED]>
+2023-07-02 09:16:28,102 INFO app Thread-2 (process_request_thread) : <Response 56 bytes [201 CREATED]>
+2023-07-02 09:16:28,104 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:16:28] "[35m[1mPOST /links/csv HTTP/1.1[0m" 201 -
+<Request 'http://localhost:5000/token' [POST]>
+2023-07-02 09:16:48,346 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/token' [POST]>
+successful authentication: ilshat@gmail.com
+2023-07-02 09:16:48,664 INFO app Thread-4 (process_request_thread) : successful authentication: ilshat@gmail.com
+<Response 575 bytes [200 OK]>
+2023-07-02 09:16:48,665 INFO app Thread-4 (process_request_thread) : <Response 575 bytes [200 OK]>
+2023-07-02 09:16:48,666 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:16:48] "POST /token HTTP/1.1" 200 -
+<Request 'http://localhost:5000/links' [POST]>
+2023-07-02 09:16:59,264 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/links' [POST]>
+<Response 207 bytes [400 BAD REQUEST]>
+2023-07-02 09:16:59,300 INFO app Thread-5 (process_request_thread) : <Response 207 bytes [400 BAD REQUEST]>
+2023-07-02 09:16:59,304 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:16:59] "[31m[1mPOST /links HTTP/1.1[0m" 400 -
+<Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+2023-07-02 09:17:05,437 INFO app Thread-6 (process_request_thread) : <Request 'http://localhost:5000/links?order=asc&sort=id' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 09:17:05,581 INFO app Thread-6 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 09:17:05,584 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 09:17:05] "GET /links?order=asc&sort=id HTTP/1.1" 200 -

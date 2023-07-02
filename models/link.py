@@ -1,7 +1,6 @@
 from extensions import db 
 from sqlalchemy import desc, asc, or_
 from sqlalchemy_utils import UUIDType
-from flask import current_app
 
 
 
