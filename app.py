@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 
 from config import Config
 from extensions import db, jwt
-from wi import get_logs, table, index, upload, file_upload
+from wi import get_logs, table, index, upload, file_upload, logs_page, stream, pdf_download
 from resources.user import UserListResource
 from resources.link import LinkListResource, LinkResource, LinkImageUploadResource, LinkCsvUploadResource
 from resources.token_res import TokenResource, RefreshResource, RevokeResource, jwt_redis_blocklist
@@ -69,6 +69,9 @@ def register_resources(app: Flask):
     app.add_url_rule('/table/<string:sort>/<string:order>/<int:page>', view_func=table)
     app.add_url_rule('/upload', view_func=upload, methods=['GET', 'POST'])
     app.add_url_rule('/file_upload', view_func=file_upload, methods=['POST'])
+    app.add_url_rule('/logs_page', view_func=logs_page)
+    app.add_url_rule('/stream', view_func=stream)
+    app.add_url_rule('/pdf_logs', view_func=pdf_download)
     
 if __name__ == '__main__':
     app = create_app()

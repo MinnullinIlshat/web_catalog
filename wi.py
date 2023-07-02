@@ -1,10 +1,12 @@
 import requests
 from io import BytesIO
-from flask import current_app, render_template
+from flask import current_app, render_template, redirect
 from flask import request, flash
 from http import HTTPStatus
 from zipfile import ZipFile
 from utils import csvfile_processing
+from time import sleep
+from fpdf import FPDF
 
 
 
@@ -17,6 +19,15 @@ def get_logs():
     
 def index():
     data = dict(requests.get('http://localhost:5000/links').json())
+    
+    if data['links'].get('first'):
+        data['links']['first'] = data['links']['first'][-1]
+    if data['links'].get('prev'):
+        data['links']['prev'] = data['links']['prev'][-1]
+    if data['links'].get('next'):
+        data['links']['next'] = data['links']['next'][-1]
+    data['links']['first'] = data['links']['first'][-1]
+    data['links']['last'] = data['links']['last'][-1]
     
     pages = [i for i in range(1, data['pages'] + 1)]
     
@@ -80,3 +91,26 @@ def file_upload():
         }
         
         return render_template('file_upload_success.html', data=data)
+    
+def logs_page():
+    return render_template('logging.html')
+    
+def stream():
+    def generate():
+        with open('logfile.log') as f:
+            while True:
+                lines = f.readlines()
+                yield ''.join(lines[-20:])
+                sleep(1)
+    
+    return current_app.response_class(generate(), mimetype="text/plain")
+
+def pdf_download():
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=15)
+    with open('logfile.log') as file: 
+        for line in file: 
+            pdf.cell(200, 10, txt=line, ln=1, align='C')
+    pdf.output('static/images/assets/logs.pdf')
+    return redirect(f"/static/images/assets/logs.pdf")

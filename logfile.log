@@ -2319,3 +2319,439 @@ add link to db: https://ru.wikipedia.org/wiki/Cron
 <Response 7041 bytes [200 OK]>
 2023-07-02 06:20:53,614 INFO app Thread-6 (process_request_thread) : <Response 7041 bytes [200 OK]>
 2023-07-02 06:20:53,616 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:20:53] "GET / HTTP/1.1" 200 -
+2023-07-02 06:28:37,971 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-02 06:28:37,971 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-02 06:28:37,973 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:28:40,024 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:28:40,025 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/table/protocol/desc/1' [GET]>
+2023-07-02 06:28:41,045 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/table/protocol/desc/1' [GET]>
+2023-07-02 06:28:41,056 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=protocol&order=asc&page=1' [GET]>
+2023-07-02 06:28:41,062 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/links?sort=protocol&order=asc&page=1' [GET]>
+<Response 6745 bytes [200 OK]>
+2023-07-02 06:28:41,151 INFO app Thread-4 (process_request_thread) : <Response 6745 bytes [200 OK]>
+2023-07-02 06:28:41,158 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:28:41] "GET /links?sort=protocol&order=asc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:28:41,161 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : http://localhost:5000 "GET /links?sort=protocol&order=asc&page=1 HTTP/1.1" 200 6745
+<Response 8245 bytes [200 OK]>
+2023-07-02 06:28:41,241 INFO app Thread-2 (process_request_thread) : <Response 8245 bytes [200 OK]>
+2023-07-02 06:28:41,243 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:28:41] "GET /table/protocol/desc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/path/asc/1' [GET]>
+2023-07-02 06:28:44,704 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/table/path/asc/1' [GET]>
+2023-07-02 06:28:44,713 DEBUG urllib3.connectionpool Thread-3 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=path&order=desc&page=1' [GET]>
+2023-07-02 06:28:44,721 INFO app Thread-6 (process_request_thread) : <Request 'http://localhost:5000/links?sort=path&order=desc&page=1' [GET]>
+<Response 5344 bytes [200 OK]>
+2023-07-02 06:28:44,743 INFO app Thread-6 (process_request_thread) : <Response 5344 bytes [200 OK]>
+2023-07-02 06:28:44,745 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:28:44] "GET /links?sort=path&order=desc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:28:44,746 DEBUG urllib3.connectionpool Thread-3 (process_request_thread) : http://localhost:5000 "GET /links?sort=path&order=desc&page=1 HTTP/1.1" 200 5344
+<Response 6867 bytes [200 OK]>
+2023-07-02 06:28:44,751 INFO app Thread-3 (process_request_thread) : <Response 6867 bytes [200 OK]>
+2023-07-02 06:28:44,752 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:28:44] "GET /table/path/asc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/domain_zone/desc/1' [GET]>
+2023-07-02 06:28:46,864 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/table/domain_zone/desc/1' [GET]>
+2023-07-02 06:28:46,876 DEBUG urllib3.connectionpool Thread-5 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=domain_zone&order=asc&page=1' [GET]>
+2023-07-02 06:28:46,882 INFO app Thread-8 (process_request_thread) : <Request 'http://localhost:5000/links?sort=domain_zone&order=asc&page=1' [GET]>
+<Response 6699 bytes [200 OK]>
+2023-07-02 06:28:46,903 INFO app Thread-8 (process_request_thread) : <Response 6699 bytes [200 OK]>
+2023-07-02 06:28:46,905 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:28:46] "GET /links?sort=domain_zone&order=asc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:28:46,906 DEBUG urllib3.connectionpool Thread-5 (process_request_thread) : http://localhost:5000 "GET /links?sort=domain_zone&order=asc&page=1 HTTP/1.1" 200 6699
+<Response 8243 bytes [200 OK]>
+2023-07-02 06:28:46,909 INFO app Thread-5 (process_request_thread) : <Response 8243 bytes [200 OK]>
+2023-07-02 06:28:46,910 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:28:46] "GET /table/domain_zone/desc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/logs' [GET]>
+2023-07-02 06:29:18,371 INFO app Thread-7 (process_request_thread) : <Request 'http://localhost:5000/logs' [GET]>
+<Response 5675 bytes [200 OK]>
+2023-07-02 06:29:18,374 INFO app Thread-7 (process_request_thread) : <Response 5675 bytes [200 OK]>
+2023-07-02 06:29:18,376 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:29:18] "GET /logs HTTP/1.1" 200 -
+2023-07-02 06:30:14,014 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-02 06:30:14,527 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:35:42,874 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-02 06:35:42,874 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-02 06:35:42,876 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:35:44,914 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:35:44,915 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:35:47,247 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:35:47,253 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-02 06:35:47,259 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 5281 bytes [200 OK]>
+2023-07-02 06:35:47,352 INFO app Thread-4 (process_request_thread) : <Response 5281 bytes [200 OK]>
+2023-07-02 06:35:47,353 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:35:47] "GET /links HTTP/1.1" 200 -
+2023-07-02 06:35:47,354 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : http://localhost:5000 "GET /links HTTP/1.1" 200 5281
+<Response 7046 bytes [200 OK]>
+2023-07-02 06:35:47,406 INFO app Thread-2 (process_request_thread) : <Response 7046 bytes [200 OK]>
+2023-07-02 06:35:47,407 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:35:47] "GET / HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=2' [GET]>
+2023-07-02 06:35:49,058 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=2' [GET]>
+<Response streamed [404 NOT FOUND]>
+2023-07-02 06:35:49,061 INFO app Thread-3 (process_request_thread) : <Response streamed [404 NOT FOUND]>
+2023-07-02 06:35:49,063 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:35:49] "[33mGET /table/id/desc/http://localhost:5000/links?page=2 HTTP/1.1[0m" 404 -
+<Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=2' [GET]>
+2023-07-02 06:35:57,912 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=2' [GET]>
+<Response streamed [404 NOT FOUND]>
+2023-07-02 06:35:57,917 INFO app Thread-5 (process_request_thread) : <Response streamed [404 NOT FOUND]>
+2023-07-02 06:35:57,918 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:35:57] "[33mGET /table/id/desc/http://localhost:5000/links?page=2 HTTP/1.1[0m" 404 -
+<Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=3' [GET]>
+2023-07-02 06:36:02,243 INFO app Thread-6 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=3' [GET]>
+<Response streamed [404 NOT FOUND]>
+2023-07-02 06:36:02,246 INFO app Thread-6 (process_request_thread) : <Response streamed [404 NOT FOUND]>
+2023-07-02 06:36:02,248 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:02] "[33mGET /table/id/desc/http://localhost:5000/links?page=3 HTTP/1.1[0m" 404 -
+<Request 'http://localhost:5000/table/id/desc/2' [GET]>
+2023-07-02 06:36:10,989 INFO app Thread-7 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/2' [GET]>
+2023-07-02 06:36:10,999 DEBUG urllib3.connectionpool Thread-7 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=asc&page=2' [GET]>
+2023-07-02 06:36:11,005 INFO app Thread-9 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=asc&page=2' [GET]>
+<Response 5450 bytes [200 OK]>
+2023-07-02 06:36:11,030 INFO app Thread-9 (process_request_thread) : <Response 5450 bytes [200 OK]>
+2023-07-02 06:36:11,032 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:11] "GET /links?sort=id&order=asc&page=2 HTTP/1.1" 200 -
+2023-07-02 06:36:11,034 DEBUG urllib3.connectionpool Thread-7 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=asc&page=2 HTTP/1.1" 200 5450
+<Response 7081 bytes [200 OK]>
+2023-07-02 06:36:11,038 INFO app Thread-7 (process_request_thread) : <Response 7081 bytes [200 OK]>
+2023-07-02 06:36:11,039 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:11] "GET /table/id/desc/2 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/asc/2' [GET]>
+2023-07-02 06:36:13,422 INFO app Thread-8 (process_request_thread) : <Request 'http://localhost:5000/table/id/asc/2' [GET]>
+2023-07-02 06:36:13,429 DEBUG urllib3.connectionpool Thread-8 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=desc&page=2' [GET]>
+2023-07-02 06:36:13,434 INFO app Thread-11 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=desc&page=2' [GET]>
+<Response 6808 bytes [200 OK]>
+2023-07-02 06:36:13,449 INFO app Thread-11 (process_request_thread) : <Response 6808 bytes [200 OK]>
+2023-07-02 06:36:13,451 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:13] "GET /links?sort=id&order=desc&page=2 HTTP/1.1" 200 -
+2023-07-02 06:36:13,452 DEBUG urllib3.connectionpool Thread-8 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=desc&page=2 HTTP/1.1" 200 6808
+<Response 8415 bytes [200 OK]>
+2023-07-02 06:36:13,457 INFO app Thread-8 (process_request_thread) : <Response 8415 bytes [200 OK]>
+2023-07-02 06:36:13,458 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:13] "GET /table/id/asc/2 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/3' [GET]>
+2023-07-02 06:36:15,801 INFO app Thread-10 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/3' [GET]>
+2023-07-02 06:36:15,808 DEBUG urllib3.connectionpool Thread-10 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=asc&page=3' [GET]>
+2023-07-02 06:36:15,814 INFO app Thread-13 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=asc&page=3' [GET]>
+<Response 800 bytes [200 OK]>
+2023-07-02 06:36:15,826 INFO app Thread-13 (process_request_thread) : <Response 800 bytes [200 OK]>
+2023-07-02 06:36:15,827 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:15] "GET /links?sort=id&order=asc&page=3 HTTP/1.1" 200 -
+2023-07-02 06:36:15,829 DEBUG urllib3.connectionpool Thread-10 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=asc&page=3 HTTP/1.1" 200 800
+<Response 3586 bytes [200 OK]>
+2023-07-02 06:36:15,831 INFO app Thread-10 (process_request_thread) : <Response 3586 bytes [200 OK]>
+2023-07-02 06:36:15,833 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:15] "GET /table/id/desc/3 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/asc/3' [GET]>
+2023-07-02 06:36:18,821 INFO app Thread-12 (process_request_thread) : <Request 'http://localhost:5000/table/id/asc/3' [GET]>
+2023-07-02 06:36:18,830 DEBUG urllib3.connectionpool Thread-12 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=desc&page=3' [GET]>
+2023-07-02 06:36:18,835 INFO app Thread-15 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=desc&page=3' [GET]>
+<Response 841 bytes [200 OK]>
+2023-07-02 06:36:18,849 INFO app Thread-15 (process_request_thread) : <Response 841 bytes [200 OK]>
+2023-07-02 06:36:18,851 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:18] "GET /links?sort=id&order=desc&page=3 HTTP/1.1" 200 -
+2023-07-02 06:36:18,853 DEBUG urllib3.connectionpool Thread-12 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=desc&page=3 HTTP/1.1" 200 841
+<Response 3644 bytes [200 OK]>
+2023-07-02 06:36:18,857 INFO app Thread-12 (process_request_thread) : <Response 3644 bytes [200 OK]>
+2023-07-02 06:36:18,858 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:18] "GET /table/id/asc/3 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:36:21,326 INFO app Thread-14 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:36:21,333 DEBUG urllib3.connectionpool Thread-14 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+2023-07-02 06:36:21,337 INFO app Thread-17 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 06:36:21,354 INFO app Thread-17 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 06:36:21,356 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:21] "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:36:21,357 DEBUG urllib3.connectionpool Thread-14 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 6727
+<Response 8178 bytes [200 OK]>
+2023-07-02 06:36:21,363 INFO app Thread-14 (process_request_thread) : <Response 8178 bytes [200 OK]>
+2023-07-02 06:36:21,364 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:21] "GET /table/id/desc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/asc/2' [GET]>
+2023-07-02 06:36:27,132 INFO app Thread-16 (process_request_thread) : <Request 'http://localhost:5000/table/id/asc/2' [GET]>
+2023-07-02 06:36:27,139 DEBUG urllib3.connectionpool Thread-16 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=desc&page=2' [GET]>
+2023-07-02 06:36:27,143 INFO app Thread-19 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=desc&page=2' [GET]>
+<Response 6808 bytes [200 OK]>
+2023-07-02 06:36:27,162 INFO app Thread-19 (process_request_thread) : <Response 6808 bytes [200 OK]>
+2023-07-02 06:36:27,166 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:27] "GET /links?sort=id&order=desc&page=2 HTTP/1.1" 200 -
+2023-07-02 06:36:27,168 DEBUG urllib3.connectionpool Thread-16 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=desc&page=2 HTTP/1.1" 200 6808
+<Response 8415 bytes [200 OK]>
+2023-07-02 06:36:27,173 INFO app Thread-16 (process_request_thread) : <Response 8415 bytes [200 OK]>
+2023-07-02 06:36:27,175 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:27] "GET /table/id/asc/2 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:36:30,512 INFO app Thread-18 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:36:30,520 DEBUG urllib3.connectionpool Thread-18 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+2023-07-02 06:36:30,524 INFO app Thread-21 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 06:36:30,540 INFO app Thread-21 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 06:36:30,542 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:30] "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:36:30,543 DEBUG urllib3.connectionpool Thread-18 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 6727
+<Response 8178 bytes [200 OK]>
+2023-07-02 06:36:30,548 INFO app Thread-18 (process_request_thread) : <Response 8178 bytes [200 OK]>
+2023-07-02 06:36:30,549 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:30] "GET /table/id/desc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/asc/3' [GET]>
+2023-07-02 06:36:32,677 INFO app Thread-20 (process_request_thread) : <Request 'http://localhost:5000/table/id/asc/3' [GET]>
+2023-07-02 06:36:32,685 DEBUG urllib3.connectionpool Thread-20 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=desc&page=3' [GET]>
+2023-07-02 06:36:32,690 INFO app Thread-23 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=desc&page=3' [GET]>
+<Response 841 bytes [200 OK]>
+2023-07-02 06:36:32,703 INFO app Thread-23 (process_request_thread) : <Response 841 bytes [200 OK]>
+2023-07-02 06:36:32,705 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:32] "GET /links?sort=id&order=desc&page=3 HTTP/1.1" 200 -
+2023-07-02 06:36:32,706 DEBUG urllib3.connectionpool Thread-20 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=desc&page=3 HTTP/1.1" 200 841
+<Response 3644 bytes [200 OK]>
+2023-07-02 06:36:32,709 INFO app Thread-20 (process_request_thread) : <Response 3644 bytes [200 OK]>
+2023-07-02 06:36:32,711 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:32] "GET /table/id/asc/3 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:36:34,018 INFO app Thread-22 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:36:34,027 DEBUG urllib3.connectionpool Thread-22 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+2023-07-02 06:36:34,031 INFO app Thread-25 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 06:36:34,046 INFO app Thread-25 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 06:36:34,049 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:34] "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:36:34,051 DEBUG urllib3.connectionpool Thread-22 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 6727
+<Response 8178 bytes [200 OK]>
+2023-07-02 06:36:34,057 INFO app Thread-22 (process_request_thread) : <Response 8178 bytes [200 OK]>
+2023-07-02 06:36:34,058 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:34] "GET /table/id/desc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:36:36,199 INFO app Thread-24 (process_request_thread) : <Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:36:36,208 DEBUG urllib3.connectionpool Thread-24 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-02 06:36:36,214 INFO app Thread-27 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 5281 bytes [200 OK]>
+2023-07-02 06:36:36,229 INFO app Thread-27 (process_request_thread) : <Response 5281 bytes [200 OK]>
+2023-07-02 06:36:36,231 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:36] "GET /links HTTP/1.1" 200 -
+2023-07-02 06:36:36,232 DEBUG urllib3.connectionpool Thread-24 (process_request_thread) : http://localhost:5000 "GET /links HTTP/1.1" 200 5281
+<Response 7046 bytes [200 OK]>
+2023-07-02 06:36:36,236 INFO app Thread-24 (process_request_thread) : <Response 7046 bytes [200 OK]>
+2023-07-02 06:36:36,237 INFO werkzeug Thread-24 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:36] "GET / HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=2' [GET]>
+2023-07-02 06:36:38,133 INFO app Thread-26 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/http://localhost:5000/links?page=2' [GET]>
+<Response streamed [404 NOT FOUND]>
+2023-07-02 06:36:38,137 INFO app Thread-26 (process_request_thread) : <Response streamed [404 NOT FOUND]>
+2023-07-02 06:36:38,139 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:38] "[33mGET /table/id/desc/http://localhost:5000/links?page=2 HTTP/1.1[0m" 404 -
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 06:36:48,287 INFO app Thread-28 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 1130 bytes [200 OK]>
+2023-07-02 06:36:48,295 INFO app Thread-28 (process_request_thread) : <Response 1130 bytes [200 OK]>
+2023-07-02 06:36:48,297 INFO werkzeug Thread-28 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:36:48] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:37:10,910 INFO app Thread-29 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:37:10,915 DEBUG urllib3.connectionpool Thread-29 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+2023-07-02 06:37:10,920 INFO app Thread-30 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 06:37:10,938 INFO app Thread-30 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 06:37:10,941 INFO werkzeug Thread-30 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:37:10] "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:37:10,943 DEBUG urllib3.connectionpool Thread-29 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 6727
+<Response 8178 bytes [200 OK]>
+2023-07-02 06:37:10,947 INFO app Thread-29 (process_request_thread) : <Response 8178 bytes [200 OK]>
+2023-07-02 06:37:10,949 INFO werkzeug Thread-29 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:37:10] "GET /table/id/desc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:37:17,526 INFO app Thread-31 (process_request_thread) : <Request 'http://localhost:5000/table/id/desc/1' [GET]>
+2023-07-02 06:37:17,535 DEBUG urllib3.connectionpool Thread-31 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+2023-07-02 06:37:17,540 INFO app Thread-33 (process_request_thread) : <Request 'http://localhost:5000/links?sort=id&order=asc&page=1' [GET]>
+<Response 6727 bytes [200 OK]>
+2023-07-02 06:37:17,561 INFO app Thread-33 (process_request_thread) : <Response 6727 bytes [200 OK]>
+2023-07-02 06:37:17,564 INFO werkzeug Thread-33 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:37:17] "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 -
+2023-07-02 06:37:17,565 DEBUG urllib3.connectionpool Thread-31 (process_request_thread) : http://localhost:5000 "GET /links?sort=id&order=asc&page=1 HTTP/1.1" 200 6727
+<Response 8178 bytes [200 OK]>
+2023-07-02 06:37:17,572 INFO app Thread-31 (process_request_thread) : <Response 8178 bytes [200 OK]>
+2023-07-02 06:37:17,574 INFO werkzeug Thread-31 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:37:17] "GET /table/id/desc/1 HTTP/1.1" 200 -
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 06:37:23,322 INFO app Thread-32 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 1130 bytes [200 OK]>
+2023-07-02 06:37:23,325 INFO app Thread-32 (process_request_thread) : <Response 1130 bytes [200 OK]>
+2023-07-02 06:37:23,326 INFO werkzeug Thread-32 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:37:23] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 06:38:14,096 INFO app Thread-34 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 270 bytes [200 OK]>
+2023-07-02 06:38:14,106 INFO app Thread-34 (process_request_thread) : <Response 270 bytes [200 OK]>
+2023-07-02 06:38:14,108 INFO werkzeug Thread-34 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:38:14] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 06:38:14,146 INFO app Thread-35 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 06:38:14,147 INFO app Thread-35 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 06:38:14,151 INFO werkzeug Thread-35 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:38:14] "GET /stream HTTP/1.1" 200 -
+<Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:47:27,873 INFO app Thread-37 (process_request_thread) : <Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:47:27,894 DEBUG urllib3.connectionpool Thread-37 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-02 06:47:27,901 INFO app Thread-39 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 5281 bytes [200 OK]>
+2023-07-02 06:47:27,917 INFO app Thread-39 (process_request_thread) : <Response 5281 bytes [200 OK]>
+2023-07-02 06:47:27,920 INFO werkzeug Thread-39 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:27] "GET /links HTTP/1.1" 200 -
+2023-07-02 06:47:27,921 DEBUG urllib3.connectionpool Thread-37 (process_request_thread) : http://localhost:5000 "GET /links HTTP/1.1" 200 5281
+<Response 7046 bytes [200 OK]>
+2023-07-02 06:47:27,925 INFO app Thread-37 (process_request_thread) : <Response 7046 bytes [200 OK]>
+2023-07-02 06:47:27,926 INFO werkzeug Thread-37 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:27] "GET / HTTP/1.1" 200 -
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 06:47:29,557 INFO app Thread-38 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 418 bytes [200 OK]>
+2023-07-02 06:47:29,566 INFO app Thread-38 (process_request_thread) : <Response 418 bytes [200 OK]>
+2023-07-02 06:47:29,568 INFO werkzeug Thread-38 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:29] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 06:47:29,640 INFO app Thread-40 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 06:47:29,641 INFO app Thread-40 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 06:47:29,645 INFO werkzeug Thread-40 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:29] "GET /stream HTTP/1.1" 200 -
+<Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:47:34,050 INFO app Thread-41 (process_request_thread) : <Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:47:34,059 DEBUG urllib3.connectionpool Thread-41 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-02 06:47:34,065 INFO app Thread-42 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 5281 bytes [200 OK]>
+2023-07-02 06:47:34,083 INFO app Thread-42 (process_request_thread) : <Response 5281 bytes [200 OK]>
+2023-07-02 06:47:34,085 INFO werkzeug Thread-42 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:34] "GET /links HTTP/1.1" 200 -
+2023-07-02 06:47:34,086 DEBUG urllib3.connectionpool Thread-41 (process_request_thread) : http://localhost:5000 "GET /links HTTP/1.1" 200 5281
+<Response 7046 bytes [200 OK]>
+2023-07-02 06:47:34,091 INFO app Thread-41 (process_request_thread) : <Response 7046 bytes [200 OK]>
+2023-07-02 06:47:34,092 INFO werkzeug Thread-41 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:34] "GET / HTTP/1.1" 200 -
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 06:47:36,732 INFO app Thread-43 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 418 bytes [200 OK]>
+2023-07-02 06:47:36,734 INFO app Thread-43 (process_request_thread) : <Response 418 bytes [200 OK]>
+2023-07-02 06:47:36,736 INFO werkzeug Thread-43 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:36] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 06:47:36,781 INFO app Thread-44 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 06:47:36,782 INFO app Thread-44 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 06:47:36,788 INFO werkzeug Thread-44 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:47:36] "GET /stream HTTP/1.1" 200 -
+2023-07-02 06:48:20,399 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/wi.py', reloading
+2023-07-02 06:48:20,884 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:48:23,276 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:48:23,277 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+2023-07-02 06:48:44,066 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/wi.py', reloading
+2023-07-02 06:48:44,590 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:48:46,832 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:48:46,833 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+2023-07-02 06:48:53,087 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-02 06:48:53,556 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:48:55,754 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:48:55,755 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+2023-07-02 06:49:38,231 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/app.py', reloading
+2023-07-02 06:49:38,712 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 06:49:40,906 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 06:49:40,907 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 06:50:06,819 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 426 bytes [200 OK]>
+2023-07-02 06:50:06,835 INFO app Thread-2 (process_request_thread) : <Response 426 bytes [200 OK]>
+2023-07-02 06:50:06,837 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:50:06] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 06:50:06,892 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 06:50:06,893 INFO app Thread-3 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 06:50:06,903 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:50:06] "GET /stream HTTP/1.1" 200 -
+<Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:50:10,907 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/' [GET]>
+2023-07-02 06:50:10,919 DEBUG urllib3.connectionpool Thread-4 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-02 06:50:10,926 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 5281 bytes [200 OK]>
+2023-07-02 06:50:11,081 INFO app Thread-5 (process_request_thread) : <Response 5281 bytes [200 OK]>
+2023-07-02 06:50:11,083 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:50:11] "GET /links HTTP/1.1" 200 -
+2023-07-02 06:50:11,085 DEBUG urllib3.connectionpool Thread-4 (process_request_thread) : http://localhost:5000 "GET /links HTTP/1.1" 200 5281
+<Response 6848 bytes [200 OK]>
+2023-07-02 06:50:11,168 INFO app Thread-4 (process_request_thread) : <Response 6848 bytes [200 OK]>
+2023-07-02 06:50:11,170 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 06:50:11] "GET / HTTP/1.1" 200 -
+2023-07-02 07:03:51,402 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-02 07:03:51,402 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-07-02 07:03:51,404 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 07:03:53,657 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 07:03:53,663 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 07:03:55,283 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 426 bytes [200 OK]>
+2023-07-02 07:03:55,297 INFO app Thread-2 (process_request_thread) : <Response 426 bytes [200 OK]>
+2023-07-02 07:03:55,299 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:03:55] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 07:03:55,342 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 07:03:55,343 INFO app Thread-3 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 07:03:55,346 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:03:55] "GET /stream HTTP/1.1" 200 -
+<Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:03:57,464 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:03:57,654 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:03:57] "[35m[1mGET /pdf_logs HTTP/1.1[0m" 500 -
+2023-07-02 07:06:26,953 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/wi.py', reloading
+2023-07-02 07:06:27,451 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 07:06:29,710 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 07:06:29,711 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/' [GET]>
+2023-07-02 07:06:33,210 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/' [GET]>
+2023-07-02 07:06:33,220 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : Starting new HTTP connection (1): localhost:5000
+<Request 'http://localhost:5000/links' [GET]>
+2023-07-02 07:06:33,227 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/links' [GET]>
+<Response 5281 bytes [200 OK]>
+2023-07-02 07:06:33,326 INFO app Thread-4 (process_request_thread) : <Response 5281 bytes [200 OK]>
+2023-07-02 07:06:33,329 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:06:33] "GET /links HTTP/1.1" 200 -
+2023-07-02 07:06:33,330 DEBUG urllib3.connectionpool Thread-2 (process_request_thread) : http://localhost:5000 "GET /links HTTP/1.1" 200 5281
+<Response 6848 bytes [200 OK]>
+2023-07-02 07:06:33,378 INFO app Thread-2 (process_request_thread) : <Response 6848 bytes [200 OK]>
+2023-07-02 07:06:33,379 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:06:33] "GET / HTTP/1.1" 200 -
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 07:06:34,966 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 426 bytes [200 OK]>
+2023-07-02 07:06:34,974 INFO app Thread-3 (process_request_thread) : <Response 426 bytes [200 OK]>
+2023-07-02 07:06:34,977 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:06:34] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 07:06:35,026 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 07:06:35,028 INFO app Thread-5 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 07:06:35,032 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:06:35] "GET /stream HTTP/1.1" 200 -
+<Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:06:37,328 INFO app Thread-6 (process_request_thread) : <Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:06:37,573 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:06:37] "[35m[1mGET /pdf_logs HTTP/1.1[0m" 500 -
+<Request 'http://localhost:5000/logs_page' [GET]>
+2023-07-02 07:07:09,654 INFO app Thread-7 (process_request_thread) : <Request 'http://localhost:5000/logs_page' [GET]>
+<Response 414 bytes [200 OK]>
+2023-07-02 07:07:09,660 INFO app Thread-7 (process_request_thread) : <Response 414 bytes [200 OK]>
+2023-07-02 07:07:09,661 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:07:09] "GET /logs_page HTTP/1.1" 200 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 07:07:09,697 INFO app Thread-8 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 07:07:09,699 INFO app Thread-8 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 07:07:09,706 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:07:09] "GET /stream HTTP/1.1" 200 -
+<Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:07:12,173 INFO app Thread-9 (process_request_thread) : <Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:07:12,379 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:07:12] "[35m[1mGET /pdf_logs HTTP/1.1[0m" 500 -
+2023-07-02 07:07:12,443 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:07:12] "GET /pdf_logs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2023-07-02 07:07:12,447 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:07:12] "GET /pdf_logs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2023-07-02 07:07:12,480 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:07:12] "GET /pdf_logs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2023-07-02 07:07:12,614 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:07:12] "[36mGET /pdf_logs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-07-02 07:08:12,164 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/wi.py', reloading
+2023-07-02 07:08:12,653 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 07:08:14,752 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 07:08:14,754 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:08:14,964 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/pdf_logs' [GET]>
+<Response 293 bytes [302 FOUND]>
+2023-07-02 07:08:15,196 INFO app Thread-2 (process_request_thread) : <Response 293 bytes [302 FOUND]>
+2023-07-02 07:08:15,197 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:08:15] "[32mGET /pdf_logs HTTP/1.1[0m" 302 -
+<Request 'http://localhost:5000/pdf_logs/static/assets/logs.pdf' [GET]>
+2023-07-02 07:08:15,204 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/pdf_logs/static/assets/logs.pdf' [GET]>
+<Response streamed [404 NOT FOUND]>
+2023-07-02 07:08:15,206 INFO app Thread-3 (process_request_thread) : <Response streamed [404 NOT FOUND]>
+2023-07-02 07:08:15,207 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:08:15] "[33mGET /pdf_logs/static/assets/logs.pdf HTTP/1.1[0m" 404 -
+2023-07-02 07:08:39,861 INFO werkzeug MainThread :  * Detected change in '/home/ilshat/web_catalog/wi.py', reloading
+2023-07-02 07:08:40,347 INFO werkzeug MainThread :  * Restarting with stat
+2023-07-02 07:08:42,316 WARNING werkzeug MainThread :  * Debugger is active!
+2023-07-02 07:08:42,317 INFO werkzeug MainThread :  * Debugger PIN: 125-452-552
+<Request 'http://localhost:5000/pdf_logs/static/assets/logs.pdf' [GET]>
+2023-07-02 07:08:43,935 INFO app Thread-2 (process_request_thread) : <Request 'http://localhost:5000/pdf_logs/static/assets/logs.pdf' [GET]>
+<Response streamed [404 NOT FOUND]>
+2023-07-02 07:08:43,938 INFO app Thread-2 (process_request_thread) : <Response streamed [404 NOT FOUND]>
+2023-07-02 07:08:43,940 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:08:43] "[33mGET /pdf_logs/static/assets/logs.pdf HTTP/1.1[0m" 404 -
+<Request 'http://localhost:5000/stream' [GET]>
+2023-07-02 07:08:49,131 INFO app Thread-3 (process_request_thread) : <Request 'http://localhost:5000/stream' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 07:08:49,132 INFO app Thread-3 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 07:08:49,136 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:08:49] "GET /stream HTTP/1.1" 200 -
+<Request 'http://localhost:5000/pdf_logs' [GET]>
+2023-07-02 07:09:02,863 INFO app Thread-4 (process_request_thread) : <Request 'http://localhost:5000/pdf_logs' [GET]>
+<Response 247 bytes [302 FOUND]>
+2023-07-02 07:09:03,089 INFO app Thread-4 (process_request_thread) : <Response 247 bytes [302 FOUND]>
+2023-07-02 07:09:03,089 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:09:03] "[32mGET /pdf_logs HTTP/1.1[0m" 302 -
+<Request 'http://localhost:5000/static/images/assets/logs.pdf' [GET]>
+2023-07-02 07:09:03,097 INFO app Thread-5 (process_request_thread) : <Request 'http://localhost:5000/static/images/assets/logs.pdf' [GET]>
+<Response streamed [200 OK]>
+2023-07-02 07:09:03,110 INFO app Thread-5 (process_request_thread) : <Response streamed [200 OK]>
+2023-07-02 07:09:03,110 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [02/Jul/2023 07:09:03] "GET /static/images/assets/logs.pdf HTTP/1.1" 200 -
